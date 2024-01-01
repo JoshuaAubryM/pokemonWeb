@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lucida+Sans:wght@500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    z-index: 100;
+}
+
+.logo {
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: white;
+    padding-left: 8%;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: 1em;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #660000;
+    transition: .6s;
+}
+
+nav a span {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-bottom: .5em;
+    border-bottom: 2px solid #660000;
+    border-radius: 1em;
+    transform: scale(0) translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+
+nav a:hover span {
+    transform: scale(1.1) translateY(0);
+    opacity: 1;
+}
+
+.email {
+    font-family: "Lucida Sans";
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700px;
+    color: white;
+    padding-right: 8%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.container .content {
+    width: 40%;
+    padding-left: 8%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: black;
+    background-image: url("../images/pikachu2.jpg");
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: right;
+
+}
+
+.content h1 {
+    position: relative;
+    font-family: "Lucida Sans";
+    font-size: 48px;
+    letter-spacing: .5px;
+    color: white;
+}
+
+.content h1:nth-child(3) {
+    background: linear-gradient(to right, orangered, orange, violet, yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 64px;
+    font-family: "Kaushan Script";
+    letter-spacing: 2.5px;
+
+}
+
+.content p {
+    position: relative;
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.content .btn-box {
+    position: relative;
+    display: flex;
+    margin-top: 1.5em;
+}
+
+.btn {
+    background: goldenrod;
+    margin-right: 1.5em;
+    width: 200px;
+    text-align: center;
+    color: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 20px;
+    border-radius: 1em;
+    font-weight: 800;
+}
+
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+}
+
+.btn-box .btn:hover {
+    background: goldenrod;
+    color: black;
+}
+
+.btn-box a {
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.animate {
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: reveal-text 1.3s ease-out forwards;
+    animation-delay: calc(.7s * var(--i));
+}
+
+.bg {
+    animation: fading 1s ease-out forwards;
+    animation-delay: 3.2s;
+}
+
+@keyframes reveal-text {
+    100% {
+        width: 0;
+    }
+
+}
+
+@keyframes fading {
+    100% {
+        opacity: 0;
+    }
+}
