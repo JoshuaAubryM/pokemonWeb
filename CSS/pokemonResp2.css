@@ -279,7 +279,7 @@ nav a:hover span {
     }
 
     .navbar a {
-        display: block;
+        display: none;
         text-align: center;
         margin: 1.5rem 0;
         opacity: 0;
