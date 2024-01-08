@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lucida+Sans:wght@500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: black;
+}
+
+header {
+    /*header is flexed*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, .1);
+    width: 100%;
+    height: 12%;
+    padding-left: 8%;
+    padding-right: 8%;
+    z-index: 100;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.logo {
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.icons {
+    color: white;
+    font-size: 2.8rem;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    margin-left: 1rem;
+    /*use relative ems for responsive design*/
+    margin-right: 1rem;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #660000;
+    transition: .6s;
+}
+
+nav a span {
+    /*color change on hover effect*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #660000;
+    border-radius: 1rem;
+    transform: scale(0) translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+
+nav a:hover span {
+    transform: scale(1.1) translateY(0);
+    opacity: 1;
+}
+
+.email {
+    font-family: "Lucida Sans";
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700px;
+    color: white;
+    /*padding-right: 8%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;*/
+}
+
+@media (max-width:1200px) {
+    .header {
+        padding: 0 4%;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        margin: 0;
+    }
+
+    #check:checked~.navbar {
+        height: 15rem;
+    }
+
+    .navbar a {
+        position: relative;
+        display: block;
+        text-align: center;
+        margin: 1.5rem 0;
+        margin-bottom: 0;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+
+    }
+
+    .navbar a:hover {
+        /*probably remove*/
+        color: #660000;
+        transition: .1s;
+    }
+
+    .navbar a span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        padding: 0;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i))
+    }
+}
