@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lucida+Sans:wght@500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    /*header is flexed*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*background: linear-gradient(-45deg, rgba(160, 160, 160, .5), transparent);*/
+    background: rgba(31, 30, 30, 0.5);
+    backdrop-filter: blur(50px);
+    width: 100%;
+    height: 12%;
+    padding-left: 8%;
+    padding-right: 8%;
+    z-index: 100;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
+#check {
+    display: none;
+}
+
+.icons {
+    display: none;
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+}
+
+.logo {
+    font-family: "Kaushan Script";
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    margin-left: 1rem;
+    /*use relative ems for responsive design*/
+    margin-right: 1rem;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #660000;
+    transition: .6s;
+}
+
+nav a span {
+    /*color change on hover effect*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #660000;
+    border-radius: 1rem;
+    transform: scale(0) translateY(100px);
+    opacity: 0;
+    transition: .5s;
+}
+
+nav a:hover span {
+    transform: scale(1.1) translateY(0);
+    opacity: 1;
+}
+
+.email {
+    font-family: "Lucida Sans";
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: 700px;
+    color: white;
+    /*padding-right: 8%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;*/
+}
+
+.container .content {
+    width: 40%;
+    padding-left: 8%;
+}
+
+.container {
+    /*the container is flexed*/
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    background-color: black;
+    background-image: url("../images/pikachu2.jpg");
+    background-repeat: no-repeat;
+    background-size: 45%;
+    background-position: right;
+    z-index: -1;
+
+}
+
+.content h1 {
+    position: relative;
+    font-family: "Lucida Sans";
+    font-size: 48px;
+    letter-spacing: .5px;
+    color: white;
+}
+
+.content h1:nth-child(1) {
+    word-spacing: .5em;
+}
+
+.content h1:nth-child(2) {
+    word-spacing: .3em;
+}
+
+.content h1:nth-child(3) {
+    /*remember the webkit for the letters*/
+    background: linear-gradient(to right, orangered, orange, violet, yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 64px;
+    font-family: "Kaushan Script";
+    letter-spacing: 2.5px;
+
+}
+
+.content p {
+    position: relative;
+    line-height: 1.7;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+}
+
+.content .btn-box {
+    /*the buttons are flexed*/
+    position: relative;
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    background: goldenrod;
+    margin-right: 1.5rem;
+    width: 200px;
+    text-align: center;
+    color: black;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+    border-radius: 1rem;
+    font-weight: 800;
+}
+
+.btn-box .btn:nth-child(2) {
+    background: transparent;
+    color: goldenrod;
+    border: 2px solid goldenrod;
+}
+
+.btn-box .btn:hover {
+    background: goldenrod;
+    color: black;
+}
+
+.btn-box a {
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.animate {
+    background: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: reveal-text 1.3s ease-out forwards;
+    animation-delay: calc(.7s * var(--i));
+}
+
+.bg {
+    animation: fading 1s ease-out forwards;
+    animation-delay: 3.2s;
+}
+
+@keyframes reveal-text {
+    100% {
+        width: 0;
+    }
+
+}
+
+@keyframes fading {
+    100% {
+        opacity: 0;
+    }
+}
+
+@media (max-width:1220px) {
+    .header {
+        padding: 0 4%;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .icons {
+        display: inline-flex;
+        margin: 1rem;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(31, 30, 30, .5);
+        backdrop-filter: blur(50px);
+        overflow: hidden;
+        margin: 0;
+        /*remember box shadow*/
+        box-shadow: 0 0.5rem 1rem right rgba(31, 30, 30, .5);
+        /*x,y off-set, blur and spread radius, color*/
+        /*maybe*/
+
+    }
+
+    #check:checked~.navbar {
+        height: 15rem;
+        /*height for the background*/
+    }
+
+    .navbar a {
+        display: block;
+        text-align: center;
+        margin: 1.5rem 0;
+        opacity: 0;
+        transition: .3s ease;
+        transform: translateY(-50px);
+        cursor: default;
+
+    }
+
+    .navbar a:hover {
+        color: white;
+        transition: 0s;
+    }
+
+    .navbar a span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+    }
+
+    #check:checked~.navbar a {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        transition: .5s ease;
+        transition-delay: calc(.15s * var(--i));
+    }
+}
