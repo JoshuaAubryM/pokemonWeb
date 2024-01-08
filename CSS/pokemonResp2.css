@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Lucida+Sans:wght@500;600;700;800;900&display=swap');
 
 * {
@@ -240,6 +241,7 @@ nav a:hover span {
 
 @media (max-width: 992px) {
     .icons {
+        /*icon is not positiomed correctly when deployed to the web*/
         display: inline-flex;
         margin: 1rem;
     }
@@ -279,10 +281,10 @@ nav a:hover span {
     }
 
     .navbar a {
+        /*when deployed to the web, the links have an opacity of 1*/
         display: block;
         text-align: center;
         margin: 1.5rem 0;
-        opacity: 0;
         transition: .3s ease;
         transform: translateY(-50px);
         cursor: default;
@@ -304,7 +306,6 @@ nav a:hover span {
 
     #check:checked~.navbar a {
         display: block;
-        opacity: 1;
         transform: translateY(0);
         transition: .5s ease;
         transition-delay: calc(.15s * var(--i));
