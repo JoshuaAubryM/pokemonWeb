@@ -9,6 +9,7 @@
 body {
     background: black;
     z-index: -1;
+}
 
 header {
     /*header is flexed*/
