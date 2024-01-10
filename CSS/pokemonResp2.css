@@ -327,7 +327,6 @@ nav a:hover span {
         position: absolute;
         top: 60%;
         width: 100%;
-        height: 100vh;
         overflow-y: scroll;
         /*temporary because I am adding more content to the page*/
     }
