@@ -237,9 +237,7 @@ nav a:hover span {
     .logo {
         font-size: 1.1rem;
     }
-}
 
-@media (max-width: 992px) {
     .icons {
         /*icon is not positiomed correctly when deployed to the web*/
         display: inline-flex;
@@ -312,7 +310,7 @@ nav a:hover span {
     }
 }
 
-@media screen and (max-width: 800px) 
+@media screen and (max-width: 992px) 
 /*accounts for mobile phone landscape rotation*/
 {
     .container {
