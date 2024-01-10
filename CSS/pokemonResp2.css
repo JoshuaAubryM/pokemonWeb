@@ -356,14 +356,10 @@ nav a:hover span {
         margin-top: 1rem;
 
     }
-
-    content .btn-box {
-        width: 340px;
-    }
-
+    
     .btn {
         font-size: .7rem;
-        padding: .3rem 0;
+        padding: .3rem .4rem;
     }
 
 }
