@@ -314,7 +314,6 @@ nav a:hover span {
 
 @media screen and (max-width: 700px) {
     .container {
-        position: fixed;
         background-image: url("../images/pikachu.webp");
         background-repeat: no-repeat;
         background-position: top 40% center;
@@ -329,11 +328,11 @@ nav a:hover span {
     }
 
     .content h1 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .content h1:nth-child(3) {
-        font-size: 1.5rem;
+        font-size: .7rem;
         position: absolute;
         top: 0;
         right: 4%;
@@ -343,6 +342,7 @@ nav a:hover span {
         display: block;
         margin-top: 1.5rem;
         margin-bottom: 0;
+        font-size: .7rem;
     }
 
     .content .btn-box {
@@ -352,8 +352,8 @@ nav a:hover span {
     }
 
     .btn {
-        font-size: 1.1rem;
-        padding: .5rem 0;
+        font-size: .7rem;
+        padding: .3rem 0;
     }
 
 }
