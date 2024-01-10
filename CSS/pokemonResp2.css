@@ -328,6 +328,7 @@ nav a:hover span {
         position: absolute;
         top: 60%;
         width: 100%;
+        height: 100vh;
 
     }
 
@@ -339,7 +340,7 @@ nav a:hover span {
         font-size: .7rem;
         position: absolute;
         top: 0;
-        right: 4%;
+        right: 8%;
     }
 
     .content p {
@@ -348,12 +349,13 @@ nav a:hover span {
         font-size: .7rem;
         padding-right: 4%;
         backdrop-filter: blur(50px);
-        overflow-y: scroll;
     }
 
     .content .btn-box {
+        display: inline-flex;
         margin-top: 1rem;
-
+        padding-bottom: 1.5rem;
+        max-width: 505;
     }
     
     .btn {
