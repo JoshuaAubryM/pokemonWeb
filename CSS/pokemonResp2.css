@@ -318,7 +318,7 @@ nav a:hover span {
         top: 0;
         background-image: url("../images/pikachu.webp");
         background-repeat: no-repeat;
-        background-position: top 40% center;
+        background-position: top 47% center;
         overflow-y: scroll;
         overflow-x: hidden;
 
@@ -328,7 +328,7 @@ nav a:hover span {
         position: absolute;
         top: 60%;
         width: 100%;
-        height: 100vh;
+        /*height: 100vh;*/
 
     }
 
