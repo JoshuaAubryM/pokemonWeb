@@ -355,7 +355,7 @@ nav a:hover span {
         display: inline-flex;
         margin-top: 1rem;
         padding-bottom: 1.5rem;
-        max-width: 505;
+        max-width: 50%;
     }
     
     .btn {
