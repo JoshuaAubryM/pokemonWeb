@@ -329,6 +329,7 @@ nav a:hover span {
         top: 60%;
         width: 100%;
         overflow-y: scroll;
+        height: 50vh;
 
     }
 
