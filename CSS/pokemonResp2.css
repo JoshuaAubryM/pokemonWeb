@@ -349,12 +349,17 @@ nav a:hover span {
         font-size: .7rem;
         padding-right: 4%;
         backdrop-filter: blur(50px);
+        overflow-y: scroll;
     }
 
     .content .btn-box {
         display: inline-flex;
         margin-top: 1rem;
 
+    }
+
+    content .btn-box {
+        width: 340px;
     }
 
     .btn {
