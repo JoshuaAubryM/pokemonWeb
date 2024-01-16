@@ -8,30 +8,29 @@
 
 body {
     background-color: black;
+    color: white;
 }
 
 header {
     /*header is flexed*/
+    /*determined by the viewport*/
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    padding-top: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /*background: linear-gradient(-45deg, rgba(160, 160, 160, .5), transparent);*/
-    background: rgba(31, 30, 30, 0.5);
+    background: black;
     backdrop-filter: blur(50px);
+    padding: 1em 1.5rem;
     width: 100%;
-    height: 12%;
-    padding-left: 8%;
-    padding-right: 8%;
     z-index: 100;
 }
 
 .header::before {
     content: "";
     position: absolute;
+    /*it is determined by it's nearest element or containing block*/
     top: 0;
     left: 0;
     width: 100%;
@@ -45,10 +44,13 @@ header {
 }
 
 .icons {
+    position: absolute;
+    right: 4%;
     display: none;
-    font-size: 48px;
+    font-size: 2rem;
     color: white;
-    font-weight: 700;
+    font-weight: 00;
+    cursor: pointer;
 }
 
 .logo {
@@ -68,12 +70,12 @@ nav a {
     margin-right: 1rem;
     color: white;
     font-weight: 900;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     cursor: pointer;
 }
 
 nav a:hover {
-    color: #660000;
+    color: goldenrod;
     transition: .6s;
 }
 
@@ -82,16 +84,17 @@ nav a span {
     position: absolute;
     width: 100%;
     height: 100%;
-    padding-bottom: .5rem;
-    border-bottom: 2px solid #660000;
-    border-radius: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid goldenrod;
+    border-right: none;
+    border-left: none;
     transform: scale(0) translateY(100px);
     opacity: 0;
     transition: .5s;
 }
 
 nav a:hover span {
-    transform: scale(1.1) translateY(0);
+    transform: scale(.5) translateY(10px);
     opacity: 1;
 }
 
@@ -107,6 +110,10 @@ nav a:hover span {
     padding-left: 1rem;*/
 }
 
+/*CONTAINER*/
+/*CONTAINER*/
+/*CONTAINER*/
+
 .container .content {
     width: 40%;
     padding-left: 8%;
@@ -118,12 +125,11 @@ nav a:hover span {
     width: 100%;
     height: 100vh;
     align-items: center;
+    background-color: black;
     background-image: url("../images/pikachu2.jpg");
     background-repeat: no-repeat;
-    background-size: 45%;
-    background-position: right;
-    z-index: -1;
-
+    background-size: 20%;
+    background-position: bottom 60% right 40%;
 }
 
 .content h1 {
@@ -160,6 +166,10 @@ nav a:hover span {
     font-weight: 700;
     color: white;
 }
+
+/*BUTTON*/
+/*BUTTON*/
+/*BUTTON*/
 
 .content .btn-box {
     /*the buttons are flexed*/
@@ -209,16 +219,94 @@ nav a:hover span {
     animation-delay: calc(.7s * var(--i));
 }
 
-.bg {
+.animate.bg {
     animation: fading 1s ease-out forwards;
     animation-delay: 3.2s;
+}
+
+/*FOOTER*/
+/*FOOTER*?
+/*FOOTER*/
+
+.footer {
+    position: relative;
+    bottom: 0;
+    display: flex;
+    padding-right: 8%;
+    padding-left: 8%;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.footer div {
+    text-align: center;
+}
+
+.footer div h3 {
+    margin-top: 1.3rem;
+    letter-spacing: 1.3px;
+    color: white;
+    font-weight: bold;
+}
+
+.col-1 a {
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: .9rem;
+    margin-top: 1rem;
+}
+
+.col-2 {
+    flex-grow: 2;
+}
+
+.col-2 form input {
+    margin-top: .7rem;
+    width: 340px;
+    height: 36px;
+    border-radius: 1rem;
+    border: none;
+    text-align: center;
+    letter-spacing: 3px;
+    background-color: transparent;
+    color: white;
+
+}
+
+.col-2 button {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    letter-spacing: 1px;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+.col-3 p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: white;
+}
+
+.social {
+    margin-top: .7em;
+}
+
+div ion-icon {
+    margin: 0 .2rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: white;
+
 }
 
 @keyframes reveal-text {
     100% {
         width: 0;
     }
-
 }
 
 @keyframes fading {
@@ -227,30 +315,25 @@ nav a:hover span {
     }
 }
 
-@media (max-width:1220px) {
-    .header {
-        padding: 0 4%;
-    }
+@media screen and (max-width: 1000px) {
 
     .email {
         display: none;
     }
 
     .logo {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .icons {
-        /*icon is not positiomed correctly when deployed to the web*/
-        display: inline-flex;
-        margin: 1rem;
-    }
-
-    #check:checked~.icons #menu-icon {
-        display: none;
+        display: block;
     }
 
     .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #menu-icon {
         display: none;
     }
 
@@ -261,78 +344,127 @@ nav a:hover span {
     .navbar {
         position: absolute;
         top: 100%;
-        left: 0;
         width: 100%;
         height: 0;
-        background: rgba(31, 30, 30, .5);
-        backdrop-filter: blur(50px);
-        overflow: hidden;
-        margin: 0;
-        /*remember box shadow*/
-        box-shadow: 0 0.5rem 1rem right rgba(31, 30, 30, .5);
-        /*x,y off-set, blur and spread radius, color*/
-        /*maybe*/
-
+        background: black;
     }
 
     #check:checked~.navbar {
-        height: 15rem;
-        /*height for the background*/
+        height: 10rem;
     }
 
     .navbar a {
-        /*when deployed to the web, the links have an opacity of 1*/
         display: block;
         text-align: center;
-        margin: 1.5rem 0;
-        transition: .3s ease;
+        margin-bottom: 1rem;
+        font-size: .8rem;
+        letter-spacing: 2px;
+        opacity: 0;
         transform: translateY(-50px);
-        cursor: default;
+        transition: .5s ease;
 
-    }
-
-    .navbar a:hover {
-        color: white;
-        transition: 0s;
-    }
-
-    .navbar a span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
     }
 
     #check:checked~.navbar a {
-        display: block;
+        opacity: 1;
         transform: translateY(0);
-        transition: .5s ease;
-        transition-delay: calc(.15s * var(--i));
+        transition-delay: calc(.13s * var(--i));
+    }
+
+    .container {
+        background-image: url("../images/pikachu.webp");
+        background-size: 40%;
+    }
+
+    .container .content {
+        width: 100%;
+        position: absolute;
+        bottom: 30%;
+
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content h1:nth-child(3) {
+        font-size: 2rem;
+    }
+
+    .content p {
+        margin-top: 1.5rem;
+        font-size: .8rem;
+    }
+
+    .btn-box .btn {
+        font-size: .8rem;
+        padding: .5rem 1rem;
+    }
+
+    .footer {
+        width: 100%;
+    }
+
+    .footer div h3 {
+        font-size: .8rem;
+        font-weight: bold;
+    }
+
+    .col-1 a {
+        font-size: .5rem;
+    }
+
+    .col-2 form input {
+        margin-top: 1.5rem;
+        width: 50px;
+        height: 1.2rem;
+        border-radius: 0;
+        font-size: .7rem;
+    }
+
+    .col-2 button {
+        font-size: .5rem;
+    }
+
+    .col-3 p {
+        display: none;
+        font-size: .5rem;
+    }
+
+    div ion-icon {
+        display: block;
+        padding-left: 1.5rem;
+        text-align: center;
+        font-size: 1rem;
+        margin-bottom: .7rem;
     }
 }
 
-@media screen and (max-width: 992px) 
-/*accounts for mobile phone landscape rotation*/
-{
-    .container {
-        position: fixed;
-        top: 0;
-        height: 100%;
-        background-image: url("../images/pikachu.webp");
-        background-repeat: no-repeat;
-        background-position: top 47% center;
-        overflow-y: auto;
-        overflow-x: hidden;
-        scroll-behavior: smooth;
+@media (min-width: 1000px) and (max-width: 1400px) {
+    .logo {
+        font-size: 1rem;
+    }
 
+    .navbar a {
+        font-size: .9rem;
+        letter-spacing: 1px;
+    }
+
+    .email {
+        display: none;
+    }
+
+    .container {
+        background-image: url("../images/ash.jpg");
+        background-position: center;
+        background-size: 40%;
     }
 
     .container .content {
         position: absolute;
-        top: 60%;
+        top: 50%;
         width: 100%;
-        height: 100%:
+        backdrop-filter: blur(2px);
     }
 
     .content h1 {
@@ -340,29 +472,43 @@ nav a:hover span {
     }
 
     .content h1:nth-child(3) {
-        font-size: .7rem;
-        position: absolute;
-        top: 0;
-        right: 8%;
+        margin-top: 1rem;
+        font-size: 1.5rem;
     }
 
     .content p {
-        margin-top: 1.5rem;
-        margin-bottom: 0;
-        font-size: .7rem;
-        padding-right: 4%;
-        backdrop-filter: blur(50px);
-    }
-
-    .content .btn-box {
         margin-top: 1rem;
-        padding-bottom: 1.5rem;
-        max-width: 100%;
-    }
-    
-    .btn {
-        font-size: .7rem;
-        padding: .5rem 1.5rem;
+        font-size: .9rem;
     }
 
+    .btn-box .btn {
+        font-size: 1.1rem;
+        padding: .7rem 1.2rem;
+    }
+
+    .footer div h3 {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    .col-1 a {
+        font-size: .7rem;
+        font-weight: bold;
+    }
+
+    .col-2 form input {
+        margin-top: 1.5rem;
+        width: 200px;
+        height: 1.5rem;
+        border-radius: 0;
+    }
+
+    .col-2 button {
+        font-size: .7rem;
+    }
+
+    .col-3 p {
+        text-align: center;
+        font-size: .7rem;
+    }
 }
