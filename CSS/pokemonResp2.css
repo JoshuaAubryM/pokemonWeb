@@ -339,15 +339,7 @@ nav a:hover span {
 }
 
 @media screen and (max-width: 600px) {
-    
-    .container {
-            background: black;
-    }
 
-    .content p {
-        width: 100%;
-    }
-    
     .email {
         display: none;
     }
@@ -403,6 +395,7 @@ nav a:hover span {
     }
 
     .container {
+        position: relative;
         background-image: url("../images/pikachu.webp");
         background-size: 40%;
     }
@@ -410,7 +403,8 @@ nav a:hover span {
     .container .content {
         width: 100%;
         position: absolute;
-        bottom: -5%;
+        top: 25%;
+        /*bottom: -5%;*/
 
     }
 
@@ -425,6 +419,11 @@ nav a:hover span {
     .content p {
         margin-top: 1.5rem;
         font-size: .8rem;
+        letter-spacing: 2px;
+    }
+
+    .content .btn-box {
+        margin-top: 2rem;
     }
 
     .btn-box .btn {
@@ -432,65 +431,15 @@ nav a:hover span {
         padding: .5rem 1rem;
     }
 
-    .footer {
-        display: block;
+    .container {
+        background-image: none;
+    }
+
+    .content p {
         width: 100%;
-        max-width: 900px;
     }
 
-    .col-1 a {
-        display: inline-flex;
-        letter-spacing: 2px;
-        font-size: .8rem;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 2rem;
-        text-align: center;
-        color: white;
-        font-weight: bold;
-    }
 
-    .col-2 {
-        flex-grow: 0;
-        margin-top: .2rem;
-        margin-bottom: 0;
-    }
-
-    .col-2 h3 {
-        display: none;
-    }
-
-    .col-2 form {
-        text-align: center;
-    }
-
-    .col-2 form input {
-        width: 400px;
-    }
-
-    .col-2 .paragraph {
-        display: none;
-        margin-top: 1rem;
-        margin-bottom: 8px;
-    }
-
-    .col-3 h3 {
-        display: none;
-    }
-
-    .col-3 p {
-        display: none;
-    }
-
-    .col-3 .footer-icons {
-        display: inline-block;
-        left: 0;
-    }
-
-    .col-3 .footer-icons i {
-        font-size: 1.5rem;
-        margin: 1rem .5rem .1rem;
-    }
 }
 
 @media (min-width: 600px) and (max-width: 1000px) {
