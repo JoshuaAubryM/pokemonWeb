@@ -421,7 +421,8 @@ nav a:hover span {
         font-size: .8rem;
         padding: .5rem 1rem;
     }
-.footer {
+
+    .footer {
         display: block;
         width: 100%;
         max-width: 900px;
