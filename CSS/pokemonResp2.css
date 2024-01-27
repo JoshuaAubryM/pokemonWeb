@@ -396,8 +396,7 @@ nav a:hover span {
 
     .container {
         position: relative;
-        background-image: url("../images/pikachu.webp");
-        background-size: 40%;
+        background-image: none;
     }
 
     .container .content {
@@ -417,6 +416,7 @@ nav a:hover span {
     }
 
     .content p {
+        width: 100%;
         margin-top: 1.5rem;
         font-size: .8rem;
         letter-spacing: 2px;
@@ -430,15 +430,6 @@ nav a:hover span {
         font-size: .8rem;
         padding: .5rem 1rem;
     }
-
-    .container {
-        background-image: none;
-    }
-
-    .content p {
-        width: 100%;
-    }
-
 
 }
 
