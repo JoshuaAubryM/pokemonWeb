@@ -160,6 +160,8 @@ nav a:hover span {
 }
 
 .content p {
+    display: block;
+    width: 400px;
     position: relative;
     line-height: 1.7;
     font-size: 18px;
@@ -414,8 +416,6 @@ nav a:hover span {
     }
 
     .content p {
-        display: block;
-        width: 400px;
         margin-top: 1.5rem;
         font-size: .8rem;
     }
