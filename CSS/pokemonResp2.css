@@ -228,14 +228,16 @@ nav a:hover span {
 /*FOOTER*?
 /*FOOTER*/
 
+.border {
+    /*----Create a border line for the footer maybe----*/
+}
+
 .footer {
-    position: relative;
-    bottom: 0;
     display: flex;
-    padding-right: 8%;
-    padding-left: 8%;
-    margin-top: 1.5rem;
+    max-width: 1300px;
+    margin: 2rem auto;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .footer div {
@@ -243,20 +245,23 @@ nav a:hover span {
 }
 
 .footer div h3 {
-    margin-top: 1.3rem;
-    letter-spacing: 1.3px;
-    color: white;
-    font-weight: bold;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+
+.col-1 h3 {
+    margin-bottom: 1rem;
 }
 
 .col-1 a {
     display: block;
     text-decoration: none;
-    margin-bottom: 1rem;
-    color: white;
-    font-weight: bold;
-    font-size: .9rem;
     margin-top: 1rem;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+
 }
 
 .col-2 {
@@ -264,43 +269,59 @@ nav a:hover span {
 }
 
 .col-2 form input {
-    margin-top: .7rem;
-    width: 340px;
-    height: 36px;
-    border-radius: 1rem;
-    border: none;
+    margin-top: 1rem;
+    width: 400px;
+    height: 32px;
     text-align: center;
-    letter-spacing: 3px;
-    background-color: transparent;
-    color: white;
-
+    letter-spacing: 2px;
 }
 
-.col-2 button {
-    margin-top: 1rem;
-    border-radius: 1rem;
+.col-2 .paragraph {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    letter-spacing: 2px;
+    line-height: 1.2rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
     letter-spacing: 1px;
-    padding: .5rem 1rem;
-    cursor: pointer;
 }
 
 .col-3 p {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
     letter-spacing: 2px;
+}
+
+.col-3 div i {
+    font-size: 2rem;
+    margin: 2rem 1rem 0;
+    cursor: pointer;
     color: white;
 }
 
-.social {
-    margin-top: .7em;
+.col-3 div i:nth-child(1):hover {
+    color: bisque;
+    transition: .1s ease;
 }
 
-div ion-icon {
-    margin: 0 .2rem;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: white;
+.col-3 div i:nth-child(2):hover {
+    color: blue;
+    transition: 1s ease;
+}
 
+.col-3 div i:nth-child(3):hover {
+    color: lightblue;
+    transition: 1s ease;
+}
+
+.col-3 div i:nth-child(4):hover {
+    color: red;
+    transition: 1s ease;
 }
 
 @keyframes reveal-text {
@@ -400,43 +421,64 @@ div ion-icon {
         font-size: .8rem;
         padding: .5rem 1rem;
     }
-
-    .footer {
+.footer {
+        display: block;
         width: 100%;
-    }
-
-    .footer div h3 {
-        font-size: .8rem;
-        font-weight: bold;
+        max-width: 900px;
     }
 
     .col-1 a {
-        font-size: .5rem;
+        display: inline-flex;
+        letter-spacing: 2px;
+        font-size: .8rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+    }
+
+    .col-2 {
+        flex-grow: 0;
+        margin-top: .2rem;
+        margin-bottom: 0;
+    }
+
+    .col-2 h3 {
+        display: none;
+    }
+
+    .col-2 form {
+        text-align: center;
     }
 
     .col-2 form input {
-        margin-top: 1.5rem;
-        width: 170px;
-        height: 1.2rem;
-        border-radius: 0;
-        font-size: .7rem;
+        width: 400px;
     }
 
-    .col-2 button {
-        font-size: .5rem;
+    .col-2 .paragraph {
+        display: none;
+        margin-top: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .col-3 h3 {
+        display: none;
     }
 
     .col-3 p {
         display: none;
-        font-size: .5rem;
     }
 
-    div ion-icon {
-        display: block;
-        padding-left: 1.5rem;
-        text-align: center;
-        font-size: 1rem;
-        margin-bottom: .7rem;
+    .col-3 .footer-icons {
+        display: inline-block;
+        left: 0;
+    }
+
+    .col-3 .footer-icons i {
+        font-size: 1.5rem;
+        margin: 1rem .5rem .1rem;
     }
 }
 
@@ -486,29 +528,60 @@ div ion-icon {
         padding: .7rem 1.2rem;
     }
 
-    .footer div h3 {
-        font-size: 1rem;
-        font-weight: bold;
+.footer {
+        display: block;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .col-1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .col-1 h3 {
+        display: none;
     }
 
     .col-1 a {
-        font-size: .7rem;
-        font-weight: bold;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+    }
+
+    .col-2 {
+        margin-bottom: 0;
+    }
+
+    .col-2 h3 {
+        display: none;
     }
 
     .col-2 form input {
-        margin-top: 1.5rem;
-        width: 200px;
-        height: 1.5rem;
-        border-radius: 0;
+        width: 600px;
+        margin-bottom: 0;
     }
 
-    .col-2 button {
-        font-size: .7rem;
+    .col-2 .paragraph {
+        margin-top: 1rem;
+        margin-bottom: 0;
+    }
+
+    .col-3 {
+        display: block;
+        justify-content: center;
+    }
+
+    .col-3 h3 {
+        display: none;
     }
 
     .col-3 p {
-        text-align: center;
-        font-size: .7rem;
+        display: none;
+    }
+
+    .col-3 .footer-icons i {
+        margin-top: .5rem;
     }
 }
