@@ -414,6 +414,8 @@ nav a:hover span {
     }
 
     .content p {
+        display: block;
+        width: 400px;
         margin-top: 1.5rem;
         font-size: .8rem;
     }
