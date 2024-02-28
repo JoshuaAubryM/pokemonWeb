@@ -2,98 +2,478 @@
 <html>
 
 <head>
-    <title>Pokemon</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--<link href="CSS/pokemon.css" rel="stylesheet" type="text/css">-->
-    <!--<link href="CSS/pmonResNav.css" rel="stylesheet" type="text/css">-->
-    <link href="CSS/pokemonResp2.css" rel="stylesheet" type="text/css">
+    <title>Debug</title>
+    <meta charset="utf-8" name="viewpoet" content="width=device-width initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/pokeDebug.css" type="text/css">
+    <link rel="stylesheet" href="CSS/pokedebugMobile.css" type="text/css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
 
 <body>
-    <header class=".header">
-        <a href="#" class="logo">Elusive Sky.</a>
+    <!--------Header NAV-------->
+    <!--------Header NAV-------->
+    <!--------Header NAV-------->
 
-        <input type="checkbox" id="check">
-        <label for="check" class="icons">
-            <i class="bx bx-menu" id="menu-icon"></i>
-            <i class='bx bx-x' id="close-icon"></i>
-        </label>
-        <nav class="navbar">
-            <a href="#" style="--i:0"><span></span>POKEMON</a>
+    <header class="header">
+        <a class="logo" href="#">Elusive Sky.</a>
 
-            <a href="#" style="--i:1"><span></span>POKEMON</a>
+        <form class="search">
+            <input type="search" placeholder="SEARCH">
+            <button><i class='bx bx-search-alt-2'></i></button>
+        </form>
 
-            <a href="#" style="--i:2"><span></span>POKEMON</a>
-
-            <a href="#" style="--i:3"><span></span>POKEMON</a>
-
-            <a href="#" style="--i:4"><span></span>ABOUT</a>
-        </nav>
-        <a href="#" class="email">E-MAIL ME</a>
-    </header>
-
-    <section class="container">
-        <span class="animate bg"></span>
-        <div class="content">
-            <h1>GOTTA CATCH <span class="animate" style="--i:1"></span></h1>
-            <h1>EM ALL.<span class="animate" style="--i:1.5"></span></h1>
-            <h1>Jordan Fisher<span class="animate" style="--i:3"></span></h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Blanditiis quod consequatur qui esse veniam voluptate impedit ad quis porro.
-                Nihil, culpa numquam? Aliquid possimus a magnam asperiores rerum maiores! Pariatur.
-                <span class="animate" style="--i:3.7"></span>
-            </p>
-
-            <div class="btn-box">
-                <a href="#" class="btn">Meet Me</a>
-                <a href="#" class="btn">Cards</a>
-                <span class="animate" style="--i:4.27"></span>
-            </div>
+        <div id="shopping-cart">
+            <i class='bx bxs-cart-alt'></i>
         </div>
 
+    </header>
+
+    <nav class="navbar">
+        <h2 class="mobile-nav" id="mobile">Welcome</h2>
+        <span class="animation" id="mobile"></span>
+        <div id="mobile">
+            <button class="open" id="open">Open</button>
+            <button class="close" id="close">Close</button>
+        </div>
+        <div class="nav-links-container">
+            <div class="nav-links" id="mobile-dropdown">
+                <a href="#">HOME</a>
+                <a href="#">NEW RELEASES</a>
+                <a href="#">FEATURED</a>
+                <a href="#">BLOG</a>
+            </div>
+        </div>
+    </nav>
+
+    <!--------body-------->
+    <!--------body-------->
+    <!--------body-------->
+    <section class="sec-1">
+        <div class="div-1">
+            <span class="animation bg" id="computer"></span>
+            <div class="mobile-background" id="mobile">
+                <!--<img src="images/pokemonMobile7.jpg" alt="" class="bg-image" id="mobile">-->
+                <!--<img src="images/pikachuMobile.jpg" height="514px" class="bg-image" id="mobile">-->
+                <div class="mobile-container">
+                    <div class="shadow">
+                        <div class="mobile-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--------Mobile Sudo Element-------->
+            <!--------Mobile Sudo Element-------->
+            <!--------Mobile Sudo Element-------->
+            <div class="mobile-sudo" id="mobile"></div>
+            <!--------Mobile Sudo Element-------->
+            <!--------Mobile Sudo Element-------->
+            <!--------Mobile Sudo Element-------->
+
+            <div class="content">
+                <h1 id="computer">GOTTA CATCH <span id="computer" class="animation" style="--i:1"></span></h1>
+                <h1 id="computer"> EM ALL.<span id="computer" class="animation" style="--i:1.5"></span></h1>
+
+                <div>
+                    <div class="btn-box" id="computer">
+                        <span class="animation" style="--i:3;"></span>
+                        <a href="#" class="btn" id="computer">Buy</a>
+                        <a href="#" class="btn" id="computer">Trade</a>
+                    </div>
+                    <p><!--ipsum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi magni, ex aspernatur
+                    doloremque cumque possimus quo voluptatibus asperiores explicabo temporibus, odit, excepturi
+                    incidunt quae est dolor delectus distinctio fuga adipisci!-->
+                        <span class="animation" style="--i:3;"></span>
+                    </p>
+                </div>
+
+            </div>
+
+            <!----Mobile---->
+            <div class="mobile-content" id="mobile"></b>
+                <p><b>GOTTA CATCH EM ALL.</b>
+                    <a href="#" class="mobile-email">
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </p>
+            </div>
+            <!----Mobile---->
+        </div>
+        <div class="contact" id="computer">
+            <h3>EMAIL</h3>
+            <div><i class='bx bx-envelope'></i></div>
+            <a href="#" class="email">
+                Sign Up for Emails
+            </a>
+        </div>
+
+        <!--------mobile design-------->
+        <!--------mobile design-------->
+        <!--------mobile design-------->
+        <div class="meta" id="mobile">
+            <h1>NOVA TCG INFORMATION</h1>
+            <div class="meta-container">
+                <div class="meta-content">
+                    <div class="decks">
+                        <h3>New Decks</h3>
+                        <a href="#">Deck</a>
+                        <a href="#">Deck</a></b>
+                        <a href="#">Deck</a>
+                        <a href="#">Deck</a>
+                        <a href="#">Deck</a>
+                    </div>
+
+                    <div class="stores">
+                        <h3>STORES</h3>
+                        <a href="#">Leesburg</a>
+                        <a href="#">Winchester</a>
+                        <a href="#">Alexandria</a>
+                        <a href="#">Springfield</a>
+                        <a href="#">Arlington</a>
+                    </div>
+
+                    <div class="tournaments">
+                        <h3>Upcoming Tournaments</h3>
+                        <a href="#">Tournament</a>
+                        <a href="#">Tournament</a>
+                        <a href="#">Tournament</a>
+                        <a href="#">Tournament</a>
+                        <a href="#">Tournament</a></b>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--------end of mobile design-------->
+        <!--------end of mobile design-------->
+        <!--------end of mobile design-------->
+
+        <!--------Implicit Grid Images-------->
+        <!--------Implicit Grid Images-------->
+        <!--------Implicit Grid Images-------->
+        <div class="meta-pics" id="computer">
+            <h1>Updates</h1>
+            <div class="meta-portfolio">
+                <figure class="featured">
+                    <img src="images/pokemonDecks.jpg" alt="">
+                    <figcaption><a href="#">Decks</a></figcaption>
+                </figure>
+
+                <figure>
+                    <img src="images/paldeaEvolvedBox.png" alt="">
+                    <figcaption><a href="#">Packs</a></figcaption>
+                </figure>
+
+                <figure class="featured">
+
+                    <img src="images/ptournament.jpg" alt="">
+                    <figcaption><a href="#">Tournaments</a></figcaption>
+
+                </figure>
+
+                <figure>
+                    <img src="images/pokemonGo1.png" alt="">
+                    <figcaption><a href="#">Pokemon Go!</a></figcaption>
+                </figure>
+            </div>
+        </div>
+        <!--------end of Implicit Grid Images-------->
+        <!--------end of Implicit Grid Images-------->
+        <!--------end of Implicit Grid Images-------->
 
     </section>
 
-  <footer class="border">
-        <div class="footer">
-            <div class="col-1">
-                <h3>SUPPORT</h3>
-                <a href="#">Phone</a>
-                <a href="#">Email</a>
-                <a href="#">Forum</a>
-                <a href="#">FAQ</a>
-            </div>
+    <!--------EXPANDING CARDS-------->
+    <!--------EXPANDING CARDS-------->
+    <!--------EXPANDING CARDS-------->
+    <section class="sec-2">
+        <!--<h1>New Releases</h1>-->
+        <h1>New Releases</h1>
+        <div class="sec-2-container">
 
-            <div class="col-2">
-                <h3>NEWSLETTER</h3>
-                <form action="">
-                    <input type="email" placeholder="YOUR EMAIL ADDRESS" required>
-                </form>
-                <div class="paragraph">
-                    <p class="text">ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                        Id a ipsam ipsa maxime necessitatibus dicta assumenda mollitia aperiam porro eos ducimus
-                        est,
-                        quaerat sapiente cum nulla amet delectus enim dolorem?
+            <aside class="sidebar">
+                <div class="sidebar-content">
+                    <h2>Cards To Have</h2>
+                    <div class="sidebar-links">
+                        <h3 class="pokemonName">Double Colorless Energy
+                            <img src="images/doubleColorlessEnergy.png" alt="" id="double-colorless-energy">
+                        </h3>
+                        <h3>Weakness Policy
+                            <img src="images/weaknessPolicy.png" alt="">
+                        </h3>
+                        <h3>Big Parasol</h3>
+                        <h3>Stealthy Hood</h3>
+                        <h3>Tool Jammer</h3>
+                        <h3>Quick Ball</h3>
+                        <h3>Professor Juniper</h3>
+                        <h3>Professor Sycamore</h3>
+                        <h3>Pokemon Center Lady</h3>
+                        <h3>Marnie</h3>
+                    </div>
+                </div>
+            </aside>
+            <div class="cards">
+                <div class="card active" style="--bg:url(../images/scarletViolet.webp);">
+                    <div class="shadow"></div>
+                    <div class="label"></b>
+
+                        <div class="icon" style="--color: blue;">
+                            <i class='bx bx-world'></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">Scarlet And Violet</div>
+                            <div>The first open-world RPGs in the Pokémon series.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="--bg: url(../images/151_2.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+
+                        <div class="icon" style="--color: black;">
+                            <i class='bx bxs-cat'></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">Scarlet And Violet 151</div>
+                            <div>The Original Partners.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="--bg: url(../images/obsidianFlames1.jpg);">
+                    <div class="shadow"></div>
+                    <div class="label">
+
+                        <div class="icon" style="--color: red;">
+                            <i class='bx bxs-hot'></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">Scarlet And Violet Obsidian Flames</div>
+                            <div>Incredible new Pokémon.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="--bg: url(../images/paldea.webp)">
+                    <div class="shadow"></div>
+                    <div class="label">
+
+                        <div class="icon" style="--color: green;">
+                            <i class='bx bxs-leaf'></i>
+                        </div>
+                        <div class="info">
+                            <div class="title">Scarlet And Violet Paldea Evolved</div>
+                            <div>A town that's famous for its flowers and art.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--------Section 3-------->
+    <!--------Section 3-------->
+    <!--------Section 3-------->
+    <section class="sec-3">
+
+
+        <div class="slider">
+            <div class="list">
+                <!--Card !-->
+                <div class="item">
+                    <!----Create a pokemon card---->
+                        <img src="images/machampMobile.avif" alt="">
+                </div>
+
+                <!--Card 2-->
+                <div class="item">
+                    <!----Create a pokemon card---->
+                    
+                        <img src="images/alakazamMobile.webp" alt="">
+                </div>
+
+                <!--Card 3-->
+                <div class="item">
+                    <!----Create a pokemon card---->
+                        <img src="" alt="">
+                </div>
+
+                <!--Card 4-->
+                <div class="item">
+                    <!----Create a pokemon card---->
+                        <img src="" alt="">
                 </div>
             </div>
 
-            <div class="col-3">
-                <h3>SOCIAL MEDIA</h3>
-                <p>Edwards Landing, <br>Leesburg, VA 20176</p>
-                <div class="footer-icons">
+          
+
+
+        </div>
+
+    <div class="slider-buttons">
+        <button id="prev">
+            <</button>
+                <button id="next">></button>
+    </div>
+
+        <div id="accessories">
+            <div id="accesory-title">
+                <h1>Accessories</h1>
+            </div>
+
+            <figure>
+                <figcaption>
+                    <p>ipsum Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
+                        quibusdam reiciendis tempore aperiam ipsa maxime debitis ipsum consequatur explicabo
+                        nihil similique sint! Ipsa inventore, quia corporis neque fugiat illum est.</p>
+                    </p>
+                </figcaption>
+            </figure>
+        </div>
+
+
+        
+        
+
+    </section>
+    <!--------Footer-------->
+    <!--------Footer-------->
+    <!--------Footer-------->
+    <footer id="computer">
+        <div class="footer">
+            <div class="col">
+                <!-- <img src="" alt="" class="logo"> -->
+
+                <p>
+                    Elusive Sky @Joshua.am.development. Contact the provided email
+                    for devleopment support. For commmon support issues check the provided links.
+                </p>
+            </div>
+            <div class="col">
+                <h3>
+                    <div class="underline"><span></span></div>Support
+                </h3>
+                <ul class="footer-links">
+                    <li><a href="#">Support Page</a></li>
+                    <li><a href="#">Phone</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Forum</a></li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>
+                    <div class="underline"><span></span></div>Social Media
+                </h3>
+                <div class="icons">
                     <i class='bx bxl-instagram-alt'></i>
                     <i class='bx bxl-facebook-circle'></i>
                     <i class='bx bxl-twitter'></i>
                     <i class='bx bxl-youtube'></i>
                 </div>
             </div>
+
+            <div class="col">
+                <h3>
+                    <div class="underline"><span></span></div>Newsletter
+                </h3>
+                <form action="">
+                    <input type="email" placeholder="Your E-Mail Address" required>
+                </form>
+                <button type="submit" class="footer-button">Submit</button>
+            </div>
+        </div>
+
+        <hr>
+        <div class="copyright">
+            <p>
+                1101 Keokuk Terrace NE, Leesburg, Virginia 20176.
+                Subject to copyright <b>`&copy;`</b>.
+                Contact me @joshua.am.development@gmail.com.
+            </p>
         </div>
     </footer>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
+    <footer id="mobile">
+        <!----mobile footer---->
+        <div class="footer">
+            <div class="footer-content">
+
+                <div class="row-1">
+                    <h3>NEWSLETTER</h3>
+                    <form action="">
+                        <p>Stay in Touch!</p>
+                        <input type="email" placeholder="YOUR EMAIL ADDRESS" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                    <div class="paragraph" id="computer">
+                        <p>ipsum Lorem ipsum dolor sit amet, consectetur adipisicing elit.<br>
+                            Id a ipsam ipsa maxime necessitatibus dicta assumenda mollitia aperiam porro eos ducimus
+                            est,<br>
+                            quaerat sapiente cum nulla amet delectus enim dolorem?</p>
+                    </div>
+                </div>
+
+                <div class="row-2">
+                    <h3>Get Help</h3>
+                    <div class="row-2-links">
+                        <a href="#">Order Status</a>
+                        <a href="#">Returns</a>
+                        <a href="#">Store Feedback</a>
+                        <a href="#">Power Up Rewards</a>
+                    </div>
+                </div>
+
+                <div class="row-3">
+                    <h3>SUPPORT</h3>
+                    <div class="row-3-links">
+                        <a href="#">Support Page</a>
+                        <a href="#">Phone</a>
+                        <a href="#">Email</a>
+                        <a href="#">FAQ</a>
+                        <a href="#">Forum</a>
+                    </div>
+                </div>
+
+                <div class="row-4">
+                    <h3>SOCIAL MEDIA</h3>
+                    <div class="footer-icons" id="mobile">
+                        <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+                        <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+                        <a href="#"><i class='bx bxl-twitter'></i></a>
+                        <a href="#"><i class='bx bxl-youtube'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright" id="mobile">
+                <p>
+                    1101 Keokuk Terrace NE, Leesburg, Virginia 20176.
+                    Subject to copyright <b>`&copy;`</b>.
+                    Contact me @joshua.am.development@gmail.com.
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="javaScript/debugScript.js" type="text/javascript"></script>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: "60px",
+            duration: 2500,
+            delay: 400
+        });
+
+        ScrollReveal().reveal(".sec-2 h1", { delay: 500, origin: "right" });
+        ScrollReveal().reveal(".sidebar", { delay: 700, origin: "left" });
+        ScrollReveal().reveal(".cards", { delay: 900, origin: "bottom" });
+
+    </script>
 </body>
 
 </html>
